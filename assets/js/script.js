@@ -365,6 +365,7 @@ var help = document.querySelector('#help');
 var close = document.querySelector('#close');
 var choixLvl = document.querySelector('#choixLvl');
 // ########## EVENT LISTENER ##########
+window.addEventListener("DOMContentLoaded", initAudioPlayer);
 window.addEventListener("keydown", eventManager);
 if (btnPlay) {btnPlay.addEventListener("click", eventManager);}
 if (btnNext) {btnNext.addEventListener("click", eventManager);}
@@ -373,13 +374,12 @@ btnValid.addEventListener("click", eventManager);
 btnHelp.addEventListener("click", eventManager);
 btnRestart.addEventListener("click", eventManager);
 if (choixLvl) {choixLvl.addEventListener("change", eventManager);}
-// window.addEventListener("DOMContentLoaded", initAudioPlayer);
 // ########## MAIN ##########
 var link;
 if(!link){
     link = new Link(lvl1);
 }
-// ########## FUNCTION ##########
+// ########## EVENT MANAGER ##########
 function eventManager() {
     if (event.type == "keydown") {
         switch(event.key) {
@@ -459,8 +459,6 @@ function eventManager() {
     }
     else if (event.type == "change") {
         if(event.target.id==choixLvl){
-
-        }
             for (let i=0; i<7; i++) {
                 for (let j=0; j<7; j++) {
                     Link.setEmpty(Link.toTile(i,j));
@@ -473,20 +471,22 @@ function eventManager() {
                 case 1: link = new Link(lvl2); break;
                 case 2: link = new Link(lvl3); break;
             }
+        } 
     }
 }
+// ########## AUDIO ##########
 var audio;
-var mute_btn;
+// var mute_btn;
 function initAudioPlayer() {
     audio = new Audio();
     audio.src = "assets/audio/08_Knight_Academy_Theme.mp3";
     audio.loop = true;
     audio.play();
     //Set object references
-    mute_btn = document.querySelector("#mute_btn");
+    // mute_btn = document.querySelector("#mute_btn");
     // //Add Event Handling
-    mute_btn.addEventListener("click", mute);
-    mute();
+    // mute_btn.addEventListener("click", mute);
+    // audio.mute();
     }
 var epee = new Audio();
 epee.src = "assets/audio/coup_depee.mp3";

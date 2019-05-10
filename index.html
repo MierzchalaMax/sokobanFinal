@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/perso_soko.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Sokoban</title>
+</head>
+
+<body>
+    <header class="container-fluid d-flex flex-column justify-content-center">
+        <div class="container">
+            <div class="row  d-flex justify-content-between">
+                <div> 
+                    <h1 class="mt-auto mb-auto">SOKOBAN</h1>
+                    <h2 class="level">LEVEL 1</h2>
+
+                        <select id="choixLvl" class="d-none" size="1" >
+                        <option selected>LEVEL 1</option>
+                        <option>LEVEL 2</option>
+                        <option>LEVEL 3</option>
+                        </select>
+                 
+                </div>
+               
+                <div class="right d-flex">
+                <div class="counter d-flex justify-content-center">
+                    <div class="mr-4 mt-auto mb-auto">
+                        <p>SCORE<br><span id="score">00000</span></p>
+                    </div>
+                    <!-- <div class="ml-4 mt-auto mb-auto">
+                        <p>TIME<br><span id="time">00:00</span></p>
+
+                    </div> -->
+                </div>
+                 <div class="container-btn d-flex">
+                    <div id="btnHelp" class="help" onmousedown="epee.play()"></div>
+                    <div id="btnValid" class="valid" onmousedown="epee.play()"></div>
+                    <div id="btnRestart" class="restart" onmousedown="epee.play()"></div>
+                    
+                </div>
+            </div>
+        </div>
+            
+        </div>
+    </header>
+
+    <section class="container-fluid d-flex flex-row justify-content-center" id="game">
+        <div class="container-game d-flex flex-row justify-content-center">
+        
+        <div id="game" class="game-board ml-auto mr-auto">
+
+            <div id="accueil">
+                <div id="container-accueil" class="d-flex flex-column justify-content-around">
+                    <div id="container-logo" class=" d-flex flex-row justify-content-center">
+                        <img src="assets/img/rubi.png" class="rotating" height="60" alt="">
+                        <img src="assets/img/perso_soko.png" height="60" alt="">
+                        <img src="assets/img/rubi.png" class="rotating" height="60" alt="">
+                    </div>
+                    <p>The rules of the game : 
+                        The aim of this game is to push the rubies into the chests.
+                        These chests are located inside a room surrounded by walls. You control a character called "Sokoban" that can be traduced by "warehouse keeper" in Japanese. 
+                        Press LEFT, RIGHT, UP and DOWN buttons to move the character. You cannot pass through walls and rubies, and you can only push one box at a time.</p>
+                    <div class="container-btn d-flex flex-row justify-content-center">
+                        <div id="btnPlay" class="btn-play mr-3" onmousedown="epee.play()"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div id="r0c0" class="empty"></div>
+                    <div id="r0c1" class="empty"></div>
+                    <div id="r0c2" class="empty"></div>
+                    <div id="r0c3" class="empty"></div>
+                    <div id="r0c4" class="empty"></div>
+                    <div id="r0c5" class="empty"></div>
+                    <div id="r0c6" class="empty"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div id="r1c0" class="empty "></div>
+                    <div id="r1c1" class="empty"></div>
+                    <div id="r1c2" class="empty"></div>
+                    <div id="r1c3" class="empty"></div>
+                    <div id="r1c4" class="empty"></div>
+                    <div id="r1c5" class="empty"></div>
+                    <div id="r1c6" class="empty"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div id="r2c0" class="empty"></div>
+                    <div id="r2c1" class="empty"></div>
+                    <div id="r2c2" class="empty"></div>
+                    <div id="r2c3" class="empty"></div>
+                    <div id="r2c4" class="empty"></div>
+                    <div id="r2c5" class="empty"></div>
+                    <div id="r2c6" class="empty"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div id="r3c0" class="empty"></div>
+                    <div id="r3c1" class="empty"></div>
+                    <div id="r3c2" class="empty"></div>
+                    <div id="r3c3" class="empty"></div>
+                    <div id="r3c4" class="empty"></div>
+                    <div id="r3c5" class="empty"></div>
+                    <div id="r3c6" class="empty"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div id="r4c0" class="empty"></div>
+                    <div id="r4c1" class="empty"></div>
+                    <div id="r4c2" class="empty"></div>
+                    <div id="r4c3" class="empty"></div>
+                    <div id="r4c4" class="empty"></div>
+                    <div id="r4c5" class="empty"></div>
+                    <div id="r4c6" class="empty"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div id="r5c0" class="empty"></div>
+                    <div id="r5c1" class="empty"></div>
+                    <div id="r5c2" class="empty"></div>
+                    <div id="r5c3" class="empty"></div>
+                    <div id="r5c4" class="empty"></div>
+                    <div id="r5c5" class="empty"></div>
+                    <div id="r5c6" class="empty"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div id="r6c0" class="empty"></div>
+                    <div id="r6c1" class="empty"></div>
+                    <div id="r6c2" class="empty"></div>
+                    <div id="r6c3" class="empty"></div>
+                    <div id="r6c4" class="empty"></div>
+                    <div id="r6c5" class="empty"></div>
+                    <div id="r6c6" class="empty"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+                    <div class="wall"></div>
+
+                   
+
+                </div>
+            </div>
+            
+
+            <div id="help">
+                <p></p>
+            </div>
+
+            <div id="victory" class=" flex-column justify-content-center">
+    
+                <img src="assets/img/trophe.png" alt="" class="d-block ml-auto mr-auto mb-3">
+                <div class="container-btn d-block ml-auto mr-auto mt-3">
+                   
+                    <div id="btnNext" class="btn-next d-inline-block ml-2" onmousedown="epee.play()"></div>
+                    
+                </div>
+
+    </div>
+        
+    </section>
+
+    <footer class="container-fluid d-flex flex-column justify-content-center">
+        <div class="container">
+            <div class="row d-flex justify-content-between ">
+                <p>Projet réalisé par : Meriem, Maxime, Dorian et Léa</p>
+                <p> En collaboration avec ACS</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

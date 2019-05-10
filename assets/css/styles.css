@@ -1,0 +1,315 @@
+@font-face {
+  font-family: "police";
+  src: url("../font/EXEPixelPerfect.ttf");
+}
+
+header {
+  background-color: black;
+  height: 20vh;
+}
+
+header h1 {
+  color: white;
+  font-family: "police" !important;
+  font-size: 5em;
+}
+
+header p {
+  color: white;
+  font-family: "police";
+  font-size: 45px;
+  margin: 0px;
+  line-height: 30px;
+  padding: 0;
+}
+
+header .help {
+  background-image: url(../img/boutons/help.png);
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  height: 40px;
+  width: 130px;
+}
+
+header .help:hover {
+  background-image: url(../img/boutons/help_hover.png);
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  height: 40px;
+}
+
+header .restart {
+  background-image: url(../img/boutons/restart.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto 20px;
+  width: 52px;
+  height: 50px;
+}
+
+header .restart:hover {
+  background-image: url(../img/boutons/restart_hover.png);
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  width: 52px;
+  height: 50px;
+}
+
+header .valid {
+  background-image: url(../img/boutons/valid.png);
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  height: 40px;
+  width: 124px;
+}
+
+header .valid:hover {
+  background-image: url(../img/boutons/valid_hover.png);
+  background-repeat: no-repeat;
+  margin: auto 20px;
+  height: 40px;
+  width: 124px;
+}
+
+header #score {
+  color: #58b950;
+  font-family: "police";
+  font-size: 45px;
+  margin: 0px !important;
+  padding: 0 !important;
+}
+
+header .level {
+  color: white;
+  font-family: "police";
+  font-size: 35px;
+}
+
+#game {
+  background-image: url("http://image.jeuxvideo.com/images/wu/z/e/zelda-wii-u-wii-u-wiiu-1402422003-002.jpg");
+  background-size: cover;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 0;
+}
+
+#game .container-game {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#game .container-game .game-board {
+  display: -ms-grid;
+  display: grid;
+  background-color: #f8e386;
+  -ms-grid-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+      grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  -ms-grid-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 550px;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 1366px) {
+  #game .container-game .game-board {
+    -ms-grid-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+        grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    -ms-grid-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+        grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    width: 420px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+#game .container-game .game-board #accueil {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  padding-top: 15vh;
+  top: 0;
+  left: 0;
+  background-image: url("https://images3.alphacoders.com/190/190129.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#game .container-game .game-board #accueil #container-accueil {
+  width: 50%;
+  height: 70vh;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: #00000079;
+  padding: 60px;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+#game .container-game .game-board #accueil #container-accueil .rotating {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+#game .container-game .game-board #accueil p {
+  color: white;
+  text-align: center;
+  font-family: "police";
+  font-size: 20px;
+}
+
+#game .container-game .game-board #accueil .btn-play {
+  height: 42px;
+  width: 124px;
+  background-image: url("../img/boutons/play.png");
+  cursor: pointer;
+}
+
+#game .container-game .game-board #accueil .btn-play:hover {
+  height: 42px;
+  width: 124px;
+  background-image: url("../img/boutons/play_hover.png");
+  cursor: pointer;
+}
+
+#game .container-game .game-board .empty {
+  background-color: white;
+  border: 1px solid #ead065;
+  background-color: #f8e386;
+}
+
+#game .container-game .game-board .wall {
+  background-image: url("../img/three.png");
+  background-size: 100% 100%;
+  border: 1px solid #ead065;
+}
+
+#game .container-game .game-board .ruby {
+  background-image: url("../img/rubi.png");
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #ead065;
+}
+
+#game .container-game .game-board .hole {
+  background-image: url("../img/hole.png");
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #ead065;
+}
+
+#game .container-game .game-board .ruby_hole {
+  background-image: url("../img/ruby_hole.png");
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #ead065;
+}
+
+#game #victory {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 20vh;
+  height: 70vh;
+  background-image: url("http://image.jeuxvideo.com/images/wu/z/e/zelda-wii-u-wii-u-wiiu-1402422003-002.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+  display: none;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#game #victory .btn-restart {
+  width: 57px;
+  height: 52px;
+  background-image: url("../img/boutons/restart.png");
+  background-position: center center;
+  cursor: pointer;
+}
+
+#game #victory .btn-restart:hover {
+  background-image: url("../img/boutons/restart_hover.png");
+}
+
+#game #victory .btn-next {
+  width: 125px;
+  height: 40px;
+  background-image: url("../img/boutons/next.png");
+  background-position: center center;
+  cursor: pointer;
+}
+
+#game #victory .btn-next:hover {
+  background-image: url("../img/boutons/next_hover.png");
+}
+
+#game #help {
+  display: none;
+  position: absolute;
+  height: 80vh;
+  width: 100vw;
+  background-color: blue;
+}
+
+footer {
+  background-color: black;
+  font-family: "police";
+  font-size: 20px;
+  color: white;
+  height: 10vh;
+}
+
+footer p {
+  margin: 0 !important;
+}
+
+#link {
+  display: block;
+  height: 80%;
+  margin: 10% auto 0 auto;
+  width: auto;
+}
+/*# sourceMappingURL=styles.css.map */

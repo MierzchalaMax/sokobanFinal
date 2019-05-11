@@ -52,12 +52,13 @@ class Link {
                     default: console.log('initBoard/switch : Unexpected case --> '+ this.map[i][j]);
                 }
             }
+            
         }
     }
     // ########## INSTANCE METHOD ##########
     // Test d'existence du tableau
     // PARAM direction et (optionel)profondeur
-    has(direction, nbr=0){
+    has(direction, nbr=0 ){
         switch(direction){
             case 'top': return (this.Y-nbr)<=0 ? false : true; break;
             case 'bottom': return (this.Y+nbr)>=6 ? false : true; break;

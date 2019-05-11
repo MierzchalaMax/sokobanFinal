@@ -1,17 +1,103 @@
-// color: #58b950;
-
 @font-face {
     font-family: "police";
     src: url("../font/EXEPixelPerfect.ttf");
   }
+
+  #accueil {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: url("https://images3.alphacoders.com/190/190129.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    #container-accueil {
+      
+      
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      background-color: #00000079;
+      padding: 0px 20%;
   
+    #container-logo {
+
+        margin-top: 60px;
+
+      @keyframes rotate {
+        from{
+            -webkit-transform: rotateY(0deg);
+        }
+        to{
+            -webkit-transform: rotateY(360deg);
+        }
+      }
+    
+      .rotating {
+        animation: rotate 2s linear infinite;
+      }
+    }
+
+    h2 {
+      font-family: "police";
+      margin-top: 20px;
+      color:white;
+      font-size: 35px;
+    }
+
+    p {
+      color: white;
+      text-align:center;
+      font-family: "police";
+      font-size: 20px;
+    }
+
+    
+
+    .arrowkey {
+      height: 50px;
+      width:80px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-bottom: 20px;
+    }
+
+    #btnPlay {
+      height: 42px;
+      width: 124px;
+      margin-left: auto ;
+      margin-right: auto ;
+      background-image: url("../img/boutons/play.png");
+      cursor: pointer;
+      margin-bottom: 60px;
+      margin-top: 30px;
+    }
+    
+    #btnPlay:hover {
+      height: 42px;
+      width: 124px;
+      background-image: url("../img/boutons/play_hover.png");
+      cursor: pointer;
+    }   
+  }
+  }
   header {
     background-color: black;
     height: 20vh;
+
     h1 {
       color: white;
       font-family: "police" !important;
       font-size: 5em;
+      cursor:default;
+    }
+
+    h2 {
+      cursor:default;
     }
   
     p {
@@ -21,6 +107,8 @@
       margin: 0px;
       line-height: 30px;
       padding: 0;
+      text-align:center;
+      cursor:default;
     }
 
     .help {
@@ -29,6 +117,7 @@
       margin: auto 20px;
       height: 40px;
       width: 130px;
+      cursor: pointer;
     }
     .help:hover {
       background-image: url(../img/boutons/help_hover.png);
@@ -43,6 +132,7 @@
       margin: auto 20px;
       width: 52px;
       height: 50px;
+      cursor: pointer;
     }
     .restart:hover {
       background-image: url(../img/boutons/restart_hover.png);
@@ -58,6 +148,7 @@
       margin: auto 20px;
       height: 40px;
       width: 124px;
+      cursor: pointer;
     }
     .valid:hover {
       background-image: url(../img/boutons/valid_hover.png);
@@ -75,6 +166,7 @@
       font-size: 45px;
       margin: 0px !important;
       padding: 0 !important;
+      
     }
     .level {
       color: white;
@@ -95,96 +187,35 @@
       
       margin-left: auto;
       margin-right:auto;
-      
-      
-    
-  
+
+      #mute_btn {
+        position:absolute;
+        left:110px;
+        top:24vh;
+        cursor:pointer;
+      }
   
     .game-board {
       display: grid;
-      
       background-color: #f8e386;
       grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
       grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
       justify-content: center;
       width:550px;
       margin-top:auto;
-
       margin-bottom: auto;
       max-height: 100%;
-      
-      
-  
+      padding-top: 30px;
+          padding-bottom: 30px;
+
       @media screen and (max-width:1366px) {
-        
-        
           grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
           grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
           width:420px;
-          padding-top: 30px;
-          padding-bottom: 30px;
           
-       
-        
       }
-  
-      #accueil {
-        display: block;
-        height: 100vh;
-        width: 100vw;
-        position:absolute;
-        
-        padding-top: 15vh;
-        top:0;
-        left:0;
-        background-image: url("https://images3.alphacoders.com/190/190129.jpg");
-        background-size: cover;
-        background-position: center center;
-  
-        #container-accueil {
-          width: 50%;
-          height: 70vh;
-          margin-left: 25%;
-          margin-right: 25%;
-          background-color: #00000079;
-          padding: 60px;
-  
-          @keyframes rotate {
-            from{
-                -webkit-transform: rotateY(0deg);
-            }
-            to{
-                -webkit-transform: rotateY(360deg);
-            }
-        }
-        
-        .rotating {
-            animation: rotate 2s linear infinite;
-        }
-        }
-  
-        p {
-          color: white;
-          text-align:center;
-          font-family: "police";
-          font-size: 20px;
-        }
-  
-        .btn-play {
-          height: 42px;
-          width: 124px;
-          background-image: url("../img/boutons/play.png");
-          cursor: pointer;
-        }
-        
-        .btn-play:hover {
-          height: 42px;
-          width: 124px;
-          background-image: url("../img/boutons/play_hover.png");
-          cursor: pointer;
-        }
-        
-      }
+
+      
   
       .empty {
         background-color: white;
@@ -221,14 +252,15 @@
         background-position: center center;
         border: 1px solid #ead065;
       }
-  
       
+      #link {
+        display: block;
+        height: 80%;
+        margin:10% auto 0 auto;
+        width: auto;
     }
-  
-    
-  
+    }  
   }
-  
   
     #victory {
       position: absolute;
@@ -281,9 +313,83 @@
     #help {
       display:none;
       position:absolute;
-      height: 80vh;
+      height: 70vh;
       width: 100vw;
-      background-color:blue;
+      background-color:rgba(0, 0, 0, 0.863);
+      font-family: 'police';
+      opacity: 1;
+      animation: fadeInFromNone 1s forwards;
+
+      @keyframes fadeInFromNone {
+        0% {
+            opacity: 0;
+        }
+     
+        1% {
+            opacity: 0;
+        }
+     
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+      .close {
+        position: absolute;
+        right: 18%;
+        top: 115px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.6;
+        cursor:pointer;
+        z-index:10;
+      }
+      .close:hover {
+        opacity: 1;
+      }
+      .close:before, .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: white;
+        
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
+      
+      .rules {
+
+        display:block;
+        margin-top: auto;
+        margin-bottom:auto;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        padding: 0px 150px; 
+       
+
+        h3 {
+          color:white;
+          font-size: 50px;
+          margin-bottom: 40px;
+        }
+
+        p {
+          padding: 0px 50px;
+          color:white;
+          font-size: 20px;
+          margin-top: 40px;
+
+        }
+      }      
     }
   }
   footer {
@@ -299,12 +405,6 @@
   }
   
 
-#link {
-    display: block;
-    height: 80%;
-    margin:10% auto 0 auto;
-    
-    width: auto;
-}
+
 
     

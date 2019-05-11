@@ -53,8 +53,8 @@
 
     <section class="container-fluid d-flex flex-row justify-content-center" id="game">
         <div class="container-game d-flex flex-row justify-content-center">
-        
-        <div id="game" class="game-board ml-auto mr-auto">
+            <img src="assets/img/boutons/sound_on.png" id="mute_btn" onclick="enableMute()" height="30" alt="">
+        <div class="game-board ml-auto mr-auto">
 
             <div id="accueil">
                 <div id="container-accueil" class="d-flex flex-column justify-content-around">
@@ -63,13 +63,13 @@
                         <img src="assets/img/perso_soko.png" height="60" alt="">
                         <img src="assets/img/rubi.png" class="rotating" height="60" alt="">
                     </div>
-                    <p>The rules of the game : 
-                        The aim of this game is to push the rubies into the chests.
-                        These chests are located inside a room surrounded by walls. You control a character called "Sokoban" that can be traduced by "warehouse keeper" in Japanese. 
-                        Press LEFT, RIGHT, UP and DOWN buttons to move the character. You cannot pass through walls and rubies, and you can only push one box at a time.</p>
-                    <div class="container-btn d-flex flex-row justify-content-center">
+                    <h2> The rules of the game</h2>
+                    <p>The objective of this game is to move chest to designated locations by pushing them.
+                    These chests are located inside a room surrounded by walls. The user controls a pusher called "Sokoban" which is said to mean something like "warehouse keeper" in Japanese. 
+                    The pusher can move up, down, left and right, but cannot pass through walls or boxes, and can only push one box at a time.
+                    At any time, a square can only be occupied by either a wall, a box, or the pusher.</p>
+                <img src="https://www.pinclipart.com/picdir/big/197-1976635_pixel-art-maker-arrows-keys-png-clipart.png" class="arrowkey" height="500" width="650" alt="">
                         <div id="btnPlay" class="btn-play mr-3" onmousedown="epee.play()"></div>
-                    </div>
                 </div>
             </div>
 
@@ -162,8 +162,15 @@
             </div>
             
 
-            <div id="help">
-                <p></p>
+            <div class="container-fluid" id="help">
+                <div id="close" class="close"></div>
+                <div class="container rules">
+                <h3>The rules of the game</h3>
+                    <p>The objective of this game is to move chest to designated locations by pushing them.
+                    These chests are located inside a room surrounded by walls. The user controls a pusher called "Sokoban" which is said to mean something like "warehouse keeper" in Japanese. 
+                    The pusher can move up, down, left and right, but cannot pass through walls or boxes, and can only push one box at a time.
+                    At any time, a square can only be occupied by either a wall, a box, or the pusher.</p>
+                </div>
             </div>
 
             <div id="victory" class=" flex-column justify-content-center">

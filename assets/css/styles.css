@@ -3,6 +3,96 @@
   src: url("../font/EXEPixelPerfect.ttf");
 }
 
+#accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://images3.alphacoders.com/190/190129.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#accueil #container-accueil {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #00000079;
+  padding: 0px 20%;
+}
+
+#accueil #container-accueil #container-logo {
+  margin-top: 60px;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+#accueil #container-accueil #container-logo .rotating {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+
+#accueil #container-accueil h2 {
+  font-family: "police";
+  margin-top: 20px;
+  color: white;
+  font-size: 35px;
+}
+
+#accueil #container-accueil p {
+  color: white;
+  text-align: center;
+  font-family: "police";
+  font-size: 20px;
+}
+
+#accueil #container-accueil .arrowkey {
+  height: 50px;
+  width: 80px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 20px;
+}
+
+#accueil #container-accueil #btnPlay {
+  height: 42px;
+  width: 124px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/boutons/play.png");
+  cursor: pointer;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+#accueil #container-accueil #btnPlay:hover {
+  height: 42px;
+  width: 124px;
+  background-image: url("../img/boutons/play_hover.png");
+  cursor: pointer;
+}
+
 header {
   background-color: black;
   height: 20vh;
@@ -12,6 +102,11 @@ header h1 {
   color: white;
   font-family: "police" !important;
   font-size: 5em;
+  cursor: default;
+}
+
+header h2 {
+  cursor: default;
 }
 
 header p {
@@ -21,6 +116,8 @@ header p {
   margin: 0px;
   line-height: 30px;
   padding: 0;
+  text-align: center;
+  cursor: default;
 }
 
 header .help {
@@ -29,6 +126,7 @@ header .help {
   margin: auto 20px;
   height: 40px;
   width: 130px;
+  cursor: pointer;
 }
 
 header .help:hover {
@@ -45,6 +143,7 @@ header .restart {
   margin: auto 20px;
   width: 52px;
   height: 50px;
+  cursor: pointer;
 }
 
 header .restart:hover {
@@ -61,6 +160,7 @@ header .valid {
   margin: auto 20px;
   height: 40px;
   width: 124px;
+  cursor: pointer;
 }
 
 header .valid:hover {
@@ -99,6 +199,13 @@ header .level {
   margin-right: auto;
 }
 
+#game .container-game #mute_btn {
+  position: absolute;
+  left: 110px;
+  top: 24vh;
+  cursor: pointer;
+}
+
 #game .container-game .game-board {
   display: -ms-grid;
   display: grid;
@@ -114,6 +221,8 @@ header .level {
   margin-top: auto;
   margin-bottom: auto;
   max-height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 1366px) {
@@ -123,75 +232,7 @@ header .level {
     -ms-grid-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
         grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px 40px;
     width: 420px;
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
-}
-
-#game .container-game .game-board #accueil {
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  padding-top: 15vh;
-  top: 0;
-  left: 0;
-  background-image: url("https://images3.alphacoders.com/190/190129.jpg");
-  background-size: cover;
-  background-position: center center;
-}
-
-#game .container-game .game-board #accueil #container-accueil {
-  width: 50%;
-  height: 70vh;
-  margin-left: 25%;
-  margin-right: 25%;
-  background-color: #00000079;
-  padding: 60px;
-}
-
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-  }
-}
-
-@keyframes rotate {
-  from {
-    -webkit-transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-  }
-}
-
-#game .container-game .game-board #accueil #container-accueil .rotating {
-  -webkit-animation: rotate 2s linear infinite;
-          animation: rotate 2s linear infinite;
-}
-
-#game .container-game .game-board #accueil p {
-  color: white;
-  text-align: center;
-  font-family: "police";
-  font-size: 20px;
-}
-
-#game .container-game .game-board #accueil .btn-play {
-  height: 42px;
-  width: 124px;
-  background-image: url("../img/boutons/play.png");
-  cursor: pointer;
-}
-
-#game .container-game .game-board #accueil .btn-play:hover {
-  height: 42px;
-  width: 124px;
-  background-image: url("../img/boutons/play_hover.png");
-  cursor: pointer;
 }
 
 #game .container-game .game-board .empty {
@@ -228,6 +269,13 @@ header .level {
   background-repeat: no-repeat;
   background-position: center center;
   border: 1px solid #ead065;
+}
+
+#game .container-game .game-board #link {
+  display: block;
+  height: 80%;
+  margin: 10% auto 0 auto;
+  width: auto;
 }
 
 #game #victory {
@@ -289,9 +337,96 @@ header .level {
 #game #help {
   display: none;
   position: absolute;
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.863);
+  font-family: 'police';
+  opacity: 1;
+  -webkit-animation: fadeInFromNone 1s forwards;
+          animation: fadeInFromNone 1s forwards;
+}
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#game #help .close {
+  position: absolute;
+  right: 18%;
+  top: 115px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#game #help .close:hover {
+  opacity: 1;
+}
+
+#game #help .close:before, #game #help .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: white;
+}
+
+#game #help .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#game #help .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#game #help .rules {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 0px 150px;
+}
+
+#game #help .rules h3 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+#game #help .rules p {
+  padding: 0px 50px;
+  color: white;
+  font-size: 20px;
+  margin-top: 40px;
 }
 
 footer {
@@ -304,12 +439,5 @@ footer {
 
 footer p {
   margin: 0 !important;
-}
-
-#link {
-  display: block;
-  height: 80%;
-  margin: 10% auto 0 auto;
-  width: auto;
 }
 /*# sourceMappingURL=styles.css.map */

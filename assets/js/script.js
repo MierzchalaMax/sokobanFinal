@@ -402,6 +402,9 @@ function eventManager() {
             case 'btnPlay': 
                 accueil.style.display = "none"; 
             break;
+            case 'close': 
+            help.style.display = "none"; 
+        break;
             case 'btnNext':
                 // if(typeof document.sessionStorage!='undefined'){
                 //     let pastLvl = document.sessionStorage.getItem('lvl');
@@ -488,5 +491,9 @@ function initAudioPlayer() {
     // mute_btn.addEventListener("click", mute);
     // audio.mute();
     }
+function enableMute(){
+    audio.muted = true;
+}
+    
 var epee = new Audio();
 epee.src = "assets/audio/coup_depee.mp3";

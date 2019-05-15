@@ -1,9 +1,25 @@
-// import {Game} from 'engine/Game.js';
-// import '/Level.js';
-
-// var game = new Game();
-let lvl = levelMaker(3);
-console.table(lvl);
+let lvl = levelMaker(0);
 let game = new Game(lvl);
-console.table(game);
+setStyleProperty();
+
+
+
+
+
+function setStyleProperty(){
+    // Container
+    let sokoban = document.querySelector('#sokoban');
+    sokoban.style.height = "100%";
+    sokoban.style.width = "100%";
+    sokoban.style.display = "flex";
+    // All tile
+    document.body.querySelectorAll("div#sokoban>div>div").forEach(function(node){
+        node.style.display = "block";
+        node.style.height = "50px";
+        node.style.width = "50px";
+        node.style.border = "1px solid black";
+    });
+}
+
+
 
